@@ -37,3 +37,8 @@ form {
 .jumbotron h1 {
 	padding-left: 10%;
 }
+
+#newButton, #infoCatch {
+	background-color: #CFD1D1;
+	color: white;
+}

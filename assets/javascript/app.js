@@ -3,6 +3,7 @@
 var gifs = {
 	// intial buttons and search parameters for gifs.
 	intialGifs: ['cats', 'lizards', 'motocross', 'coffee', 'coding'],
+	makePlayPause: true,
 
 	renderButtons: function () {
 			
@@ -19,6 +20,7 @@ var gifs = {
 
 	displayGifs: function () {
 
+	if(gifs.makePlayPause == true){
 	// dynamically displays text to inform user to play or pause gif
 	var hThree = $('<h3>');
 	var spanEl = $('<span>');
@@ -26,8 +28,11 @@ var gifs = {
 		spanEl.addClass('glyphicon glyphicon-play-circle');
 
 		hThree.html('Click image to play/pause ');
-		hThree.append(spanEl)
+		hThree.append(spanEl);
 		$('#playText').append(hThree);
+		gifs.makePlayPause = false;
+	}
+		
 	// puts the search name into a variable to be added to url.
 	var theGif = $(this).attr('data-name');
 	// dynamically generated URL that searches name of button.
@@ -112,16 +117,6 @@ $(document).on('click', '.randomGif', gifs.displayGifs);
 $(document).on('click', '.newGif', gifs.play);
 // renders intial buttons
 gifs.renderButtons();
-
-
-
-
-
-
-
-
-
-
 
 
 
