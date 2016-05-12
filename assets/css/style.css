@@ -1,0 +1,39 @@
+body {
+	background-color: #999999;
+	color: white;
+}
+
+.thumbnail {
+	float: left;
+	background-color: #999999;
+}
+
+.jumbotron {
+	background-color: #207E9E;
+}
+
+.randomGif {
+	margin-bottom: 1%;
+}
+
+#buttons, h4 {
+	text-align: center;
+}
+
+#buttons button {
+	margin-right:0.5%; 
+	margin-left:0.5%;
+	color: white;
+	background-color: #207E9E;
+}
+
+form {
+	text-align: right;
+}
+
+.jumbotron p {
+	text-align: center;
+}
+.jumbotron h1 {
+	padding-left: 10%;
+}
