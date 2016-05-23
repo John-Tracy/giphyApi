@@ -100,9 +100,10 @@ var gifs = {
 $('#infoCatch').on('click', function(){
 
 	var gif = $('#newButton').val().trim();
+	
 
 	for(var i = 0; i < gifs.intialGifs.length; i++){
-		if(gif == gifs.intialGifs[i]){
+		if(gif.toUpperCase() == gifs.intialGifs[i].toUpperCase()){
 			$('#newButton').val('');
 			return false;
 		}
