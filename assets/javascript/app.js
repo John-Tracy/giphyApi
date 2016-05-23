@@ -101,13 +101,21 @@ $('#infoCatch').on('click', function(){
 
 	var gif = $('#newButton').val().trim();
 
-	gifs.intialGifs.push(gif);
+	for(var i = 0; i < gifs.intialGifs.length; i++){
+		if(gif == gifs.intialGifs[i]){
+			$('#newButton').val('');
+			return false;
+		}
+	}
 
-	gifs.renderButtons();
+		gifs.intialGifs.push(gif);
 
-	$('#newButton').val('');
+		gifs.renderButtons();
 
-	return false;
+		$('#newButton').val('');
+
+		return false;
+	
 
 });
 
